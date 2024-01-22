@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Fyle Web Development Internship Channel</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./img/fylelogo.svg" alt="Fyle">
+        </div>
+    </nav>
+    <div class="content">
+        <div class="user_input">
+            <form id="form" role="search">
+                <input id="githubIdInput" type="search" placeholder="Search Your Github Id" >
+                <button id="searchButton" type="button"><img src="./img/search.svg" alt=""></button>
+            </form>
+            <div class="limit_select">
+                <span style="color: gray; font-size: 12px;">Repo Limit, Default 6</span>
+                <input class="limitSelectInput numberstyle" id="limit_repo" type="number" min="6" max="100" step="1" value="6">
+            </div>
+        </div>
+        <div class="data_show" >
+            <div class="loader hide" id="loader">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-75 -100 200 200">
+                    <circle fill="#000000" stroke="none" cx="0" cy="0" r="4">
+                        <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.1" />
+                    </circle>
+                    <circle fill="#000000" stroke="none" cx="15" cy="0" r="4">
+                        <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.2" />
+                    </circle>
+                    <circle fill="#000000" stroke="none" cx="30" cy="0" r="4">
+                        <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.3" />
+                    </circle>
+                </svg>
+                
+            </div>
+            <div class="data_parent" >
+                <div class="profile">
+                    <div class="avtar">
+                        <div class="avtar_circle">
+                            <img id="avatarImage" src="./img/default_profile.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="user_data">
+                        <div id="name">User Name</div>
+                        <div id="login">User id</div>
+                        <div id="bio">Bio</div>
+                        <div id="follow">
+                            <span id="followers">followers : <b>null</b></span>
+                            <span id="following">following : <b>null</b></span>
+                        </div>
+                        <div id="location" >Location : <b>unknown</b></div>
+                        <div id="public_repos">Public Reposetory : <b>null</b> </div>
+
+                    </div>
+                </div>
+                <div class="repo">
+                    
+                    <div class="repo_data" id="repoData">
+                            
+                    </div>
+                    <div class="pagination_dv" >
+                        <ul id="pagination">
+                            <li class="prev"><a href="#">«</a></li>
+                            <li class="page active"><a class="active" href="#">1</a></li>
+                            <li class="page"><a href="#">2</a></li>
+                            <li class="page"><a href="#">3</a></li>
+                            <li class="page"><a href="#">4</a></li>
+                            <li class="page"><a href="#">5</a></li>
+                            <li class="page"><a href="#">6</a></li>
+                            <li class="next"><a href="#">»</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
